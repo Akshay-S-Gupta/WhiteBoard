@@ -173,19 +173,37 @@ This creates a production-ready build in `client/build`.
 ```
 project-root/
 ├── client/                 # React frontend
-│   ├── src/
 │   ├── public/
-│   └── package.json
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── DrawingCanvas.js
+│   │   │   ├── RoomJoin.js
+│   │   │   ├── Toolbar.js
+│   │   │   ├── UserCursors.js
+│   │   │   └── Whiteboard.js
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   ├── App.test.js
+│   │   ├── index.js
+│   │   ├── index.css
+│   │   ├── logo.svg
+│   │   ├── reportWebVitals.js
+│   │   └── setupTests.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md
+│   └── .gitignore
 ├── server/                 # Node.js backend
 │   ├── models/
+│   │   └── Room.js
 │   ├── routes/
+│   │   └── rooms.js
 │   ├── socket/
-│   └── server.js
+│   │   └── whiteboard.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── server.js
+│   └── node_modules/
 ├── README.md
 └── package.json
 ```
-
----
-
-## License
-MIT 
