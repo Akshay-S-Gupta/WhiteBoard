@@ -1,5 +1,17 @@
 # Collaborative Whiteboard
 
+## Progress
+- [x] Project structure and setup (MERN + Socket.io)
+- [x] Room management (join/create with code)
+- [x] Real-time drawing and cursor sync
+- [x] Adjustable color and stroke width
+- [x] User presence and user count display
+- [x] Drawing history persistence and replay
+- [x] Modern, responsive UI (all inline CSS removed)
+- [x] Room code copy button
+- [x] API and socket event documentation
+- [x] Deployment and troubleshooting guides
+
 ## Project Overview
 A real-time collaborative whiteboard application using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Socket.io for live collaboration.
 
@@ -172,16 +184,20 @@ This creates a production-ready build in `client/build`.
 ## Directory Structure
 ```
 project-root/
-├── client/                 # React frontend
-│   ├── public/
+├── client/                      # React frontend
+│   ├── public/                  # Static assets (index.html, favicon, etc.)
 │   ├── src/
-│   │   ├── components/
-│   │   │   ├── DrawingCanvas.js
-│   │   │   ├── RoomJoin.js
-│   │   │   ├── Toolbar.js
-│   │   │   ├── UserCursors.js
-│   │   │   └── Whiteboard.js
-│   │   ├── App.js
+│   │   ├── components/          # Main React components
+│   │   │   ├── DrawingCanvas.js     # Canvas drawing logic and socket sync
+│   │   │   ├── RoomJoin.js          # Room code input/landing page
+│   │   │   ├── Toolbar.js           # Drawing controls (color, width, clear)
+│   │   │   ├── UserCursors.js       # Real-time cursor display
+│   │   │   ├── Whiteboard.js        # Main whiteboard page
+│   │   │   ├── DrawingCanvas.css    # Canvas styles
+│   │   │   ├── RoomJoin.css         # Landing page styles
+│   │   │   ├── Toolbar.css          # Toolbar styles
+│   │   │   └── Whiteboard.css       # Whiteboard page styles
+│   │   ├── App.js               # App entry point
 │   │   ├── App.css
 │   │   ├── App.test.js
 │   │   ├── index.js
@@ -193,17 +209,17 @@ project-root/
 │   ├── package-lock.json
 │   ├── README.md
 │   └── .gitignore
-├── server/                 # Node.js backend
+├── server/                      # Node.js backend
 │   ├── models/
-│   │   └── Room.js
+│   │   └── Room.js              # Mongoose schema for rooms and drawing data
 │   ├── routes/
-│   │   └── rooms.js
+│   │   └── rooms.js             # REST API endpoints for room management
 │   ├── socket/
-│   │   └── whiteboard.js
+│   │   └── whiteboard.js        # Socket.io event handlers
 │   ├── package.json
 │   ├── package-lock.json
-│   ├── server.js
+│   ├── server.js                # Express app entry point
 │   └── node_modules/
-├── README.md
-└── package.json
+├── README.md                    # Project documentation
+└── package.json                 # Root package (optional, for monorepo tools)
 ```
