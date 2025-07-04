@@ -185,7 +185,7 @@ This creates a production-ready build in `client/build`.
 ```
 project-root/
 ├── client/                      # React frontend
-│   ├── public/                  # Static assets (index.html, favicon, etc.)
+│   ├── public/                  # Static assets (index.html, manifest.json, robots.txt)
 │   ├── src/
 │   │   ├── components/          # Main React components
 │   │   │   ├── DrawingCanvas.js     # Canvas drawing logic and socket sync
@@ -193,7 +193,6 @@ project-root/
 │   │   │   ├── Toolbar.js           # Drawing controls (color, width, clear)
 │   │   │   ├── UserCursors.js       # Real-time cursor display
 │   │   │   ├── Whiteboard.js        # Main whiteboard page
-│   │   │   ├── DrawingCanvas.css    # Canvas styles
 │   │   │   ├── RoomJoin.css         # Landing page styles
 │   │   │   ├── Toolbar.css          # Toolbar styles
 │   │   │   └── Whiteboard.css       # Whiteboard page styles
@@ -202,13 +201,11 @@ project-root/
 │   │   ├── App.test.js
 │   │   ├── index.js
 │   │   ├── index.css
-│   │   ├── logo.svg
 │   │   ├── reportWebVitals.js
 │   │   └── setupTests.js
 │   ├── package.json
 │   ├── package-lock.json
-│   ├── README.md
-│   └── .gitignore
+│   └── node_modules/
 ├── server/                      # Node.js backend
 │   ├── models/
 │   │   └── Room.js              # Mongoose schema for rooms and drawing data
