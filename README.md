@@ -205,6 +205,7 @@ project-root/
 │   │   └── setupTests.js
 │   ├── package.json
 │   ├── package-lock.json
+│   ├── .gitignore               # Git ignore rules for client
 │   └── node_modules/
 ├── server/                      # Node.js backend
 │   ├── models/
@@ -215,8 +216,10 @@ project-root/
 │   │   └── whiteboard.js        # Socket.io event handlers
 │   ├── package.json
 │   ├── package-lock.json
+│   ├── .gitignore               # Git ignore rules for server
 │   ├── server.js                # Express app entry point
 │   └── node_modules/
+├── .gitignore                   # Root git ignore rules
 ├── README.md                    # Project documentation
 └── package.json                 # Root package (optional, for monorepo tools)
 ```
